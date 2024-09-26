@@ -1,25 +1,14 @@
-import { Image, StyleSheet, Platform, View, Text, Button } from "react-native";
+import MainHeader from "@/components/main/header/MainHeader";
+import { View } from "react-native";
+import StoryView from "@/components/main/storyView/StoryView";
+import PostView from "@/components/post/PostView";
 
-export default function HomeScreen() {
+export default function MainScreen() {
   return (
-    <View style={styles.headerContainer}>
-      <View style={styles.logo}>
-        <Text>Logo</Text>
-        <View>
-          <Button title="Direct Message" />
-        </View>
-      </View>
+    <View>
+      <MainHeader></MainHeader>
+      <StoryView></StoryView>
+      <PostView></PostView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  headerContainer: {
-    display: "flex",
-    flexDirection: "row",
-    width: "100%",
-  },
-  logo: {
-    display: "flex",
-  },
-});
