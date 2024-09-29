@@ -43,6 +43,5 @@ const styles = StyleSheet.create({
   logoImg: {
     height: 45,
     width: 80,
-    aspectRatio: 16/9,
   },
 });

@@ -6,6 +6,8 @@ import dummyImg4 from "@/images/dummyPostImg/insta-dummy-post-img-4.jpg";
 import dummyImg5 from "@/images/dummyPostImg/insta-dummy-post-img-5.jpg";
 import dummyImg6 from "@/images/dummyPostImg/insta-dummy-post-img-6.jpg";
 import dummyProfileImg from "@/images/dummyPostImg/dummy-post-profile-img.jpg";
+const dddimg = require('@/images/dummyPostImg/insta-dummy-post-img-1.jpg')
+import { ImageSlider } from "react-native-image-slider-banner";
 
 const dummyPostData = {
   profileImg: dummyProfileImg,
@@ -40,7 +42,22 @@ export default function Post() {
         <Text style={styles.uploaderId}>{dummyPostData.uploaderId}</Text>
       </View>
       <View style={styles.postImgContainer}>
-        <Image style={styles.postImg} source={dummyImg1} />
+        <ImageSlider
+          data={[
+            { img: dummyImg1 },
+            { img: dummyImg2 },
+            { img: dummyImg3 },
+            { img: dummyImg4 },
+            { img: dummyImg5 },
+            { img: dummyImg6 },
+          ]}
+          localImg={true}
+          autoPlay={true}
+          timer={1000}
+          onClick={() => {}}
+          
+          previewImageContainerStyle={styles.postImg}
+        ></ImageSlider>
       </View>
       <View style={styles.postContentContainer}>
         <View></View>
