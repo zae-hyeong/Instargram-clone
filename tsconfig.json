@@ -9,7 +9,9 @@
       "@/images/*": [
         "./assets/images/*"
       ]
-    }
+    },
+    "esModuleInterop": true,
+    "moduleResolution": "Bundler" // "Node10", "Node16" or "NodeNext"
   },
   "include": [
     "**/*.ts",
