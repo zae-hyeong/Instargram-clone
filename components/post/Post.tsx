@@ -1,6 +1,4 @@
 import { Image, View, Text, StyleSheet } from "react-native";
-
-
 import { ImageSlider } from "react-native-image-slider-banner";
 import { PostI } from "./PostFakerData";
 
@@ -13,21 +11,18 @@ export default function Post({post}: {post: PostI}) {
       </View>
       <View style={styles.postImgContainer}>
         {/* <ImageSlider
-          data={[
-            { img: dummyImg1 },
-            { img: dummyImg2 },
-            { img: dummyImg3 },
-            { img: dummyImg4 },
-            { img: dummyImg5 },
-            { img: dummyImg6 },
-          ]}
+          data={
+            post.imgs.map((imgUrl) => {
+              return { img: imgUrl };
+          })}
+
           localImg={true}
           autoPlay={true}
           timer={1000}
           onClick={() => {}}
           
           previewImageContainerStyle={styles.postImg}
-        ></ImageSlider> */}
+        /> */}
         <Image style={styles.postImg} source={{uri: post.imgs[0]}} />
       </View>
       <View style={styles.postContentContainer}>

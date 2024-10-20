@@ -2,15 +2,7 @@
 import { faker } from '@faker-js/faker';
 
 export default function createRandomPost() {
-  return {
-    profileImg: faker.image.avatar(),
-    uploaderId: faker.internet.userName(),
-    imgs: [faker.image.url(),faker.image.url(),faker.image.url(),faker.image.url()],
-    numOfLike: faker.number.int(),
-    numOfComment: faker.number.int(),
-    uploadBefore: faker.date.birthdate(),
-    content: faker.lorem.paragraph(),
-  };
+  return new Post();
 }
 
 export interface PostI {
